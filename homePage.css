@@ -1,15 +1,16 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+/**, *::before, *::after {*/
+/*    box-sizing: border-box;*/
+/*}*/
 
 body{
     background-image: url("img/sunset-sunflower-field.jpeg");
     color: turquoise;
     margin: 10px;
+    background-size: cover;
 }
 
-.navbar-brand{
-    margin: auto 15px;
+.navbar{
+    padding: 15px;
 }
 
 .container{
@@ -21,7 +22,8 @@ body{
 .row{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    /*align-items: center;*/
+
 }
 
 .card{
@@ -29,6 +31,7 @@ body{
     border-radius: 15px;
     overflow: hidden;
     margin: 5px;
+    height: calc(100vh / 4.0);
 }
  .main-text{
      padding: 15px;
@@ -38,7 +41,6 @@ body{
 .center{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 p{
@@ -48,6 +50,7 @@ p{
 
 ul{
     list-style-type: none;
+    padding: 0;
 }
 
 li{
@@ -59,7 +62,7 @@ li{
 .carousel{
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: sticky;
 }
 
 .carousel > ul{
@@ -94,10 +97,9 @@ li{
 .carousel-button{
     position: absolute;
     z-index: 2;
-    /*background: none;*/
     border: none;
     font-size: 2rem;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
@@ -117,9 +119,11 @@ li{
 }
 .carousel-button.left{
     left: 1rem;
+    color: turquoise;
 }
 .carousel-button.right{
     right: 1rem;
+    color: turquoise;
 }
 
 .socialIcons{
